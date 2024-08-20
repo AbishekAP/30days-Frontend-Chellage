@@ -131,6 +131,7 @@ header nav .fa-bars{
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    background-color:rgba(0, 0, 0, 0.1);
 }
 .feature-container .row{
     width: 100%;
@@ -183,6 +184,23 @@ header nav .fa-bars{
 .details-container p{
     font-weight: 300;
     color: var(--grey);
+}
+footer{
+    width: 100vw;
+    height: 50vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+footer .lower{
+    width: 100%;
+    border-top: 1px solid #ffff;
+    padding: 1rem;
+}
+footer .lower p{
+    color: #ffff;
+    text-align: center;
 }
 @media (max-width:768px){
     header{
