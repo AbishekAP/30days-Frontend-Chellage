@@ -1,0 +1,222 @@
+:root{
+    --white:#ffff;
+    --ligtht-grey:#eeee;
+    --grey:#555;
+    --bluevoilet:#8a2be2;
+}
+*{
+    box-sizing: border-box;
+    font-family:'Montserrat',sans-serif;
+    margin: 0;
+    padding:0;
+    overflow-x: hidden ;
+}
+body{
+    width: 100vw;
+   min-height: 100vh;
+}
+header{
+    width: 100vw;
+    height: 150vh;
+    padding: 40px 80px;
+    background:url('img/heroshot.png');
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-y: visible;
+    margin-bottom:100px;
+}
+header nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+    padding:8px;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    border: .5rem solid var(--white);
+    border-radius: 50%;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+header nav ul li{
+    align-self: center;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-size: 600;
+}
+header nav ul li a:hover{
+    color: var(--ligtht-grey);
+}
+header button{
+    width:120px;
+    height:40px;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    border-radius: 10rem;
+    color: var(--white);
+    font-size:.8rem;
+    font-weight:800;
+}
+header button:hover{
+    background-color: var(--white);
+    color: var(--bluevoilet);
+}
+header #menu-button{
+    display: none;
+}
+header nav .fa-bars{
+    display: none;
+    font-size: 2rem;
+    color: var(--white);
+}
+.fa-bars:active{
+    color: var(--grey);
+}
+/* hero container */
+.hero-container{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero-container .hero-content{
+    width:30rem;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+}
+.hero-content h1{
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: 500;
+}
+.hero-content p{
+    font-size: 1.2rem;
+    color: var(--white);
+}
+/*Feature*/
+.feature{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.feature-container{
+    width: 1000px;
+    height: 400px;
+    background-color: var(--white);
+    border-radius: .3rem .3rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.feature-container .row{
+    width: 100%;
+    height: 100%;
+    padding:20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.feature-container .row .col{
+    flex: 1 1 200px;
+    height: 300px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+.feature-container .row .col h3{
+    font-size: 1.2rem;
+    font-weight:500;
+    color: var(--bluevoilet);
+}
+.feature-container .row .col p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--grey);
+}
+.feature-container .line{
+    height: .3rem;
+    width: 100%;
+    background-color: var(--bluevoilet);
+}
+.details-container{
+    width: 1000px;
+    height: 10rem;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.details-container h3{
+    font-weight: 500;
+    color: var(--bluevoilet);
+}
+.details-container p{
+    font-weight: 300;
+    color: var(--grey);
+}
+@media (max-width:768px){
+    header{
+        background-position:left;
+ 
+    }
+    .hero-container{
+        justify-content: center;
+    }
+}
+@media (max-width:425px){
+    header nav #menu-button,.sign-in-btn{
+        display: none;
+    }
+    header nav .fa-bars{
+        display: block;
+    }
+    header nav #menu-list{
+        width: 100vw;
+        height: 100vh;
+        padding: 10px;
+        background-color: var(--bluevoilet);
+        position: fixed;
+        top: 10%;
+        inset: 0;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        display: none;
+    }
+    #menu-button:checked ~ #menu-list{
+        display: flex;
+    }
+}
